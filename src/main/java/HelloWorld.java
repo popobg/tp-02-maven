@@ -1,6 +1,19 @@
+import com.github.lalyos.jfiglet.FigletFont;
+
+import java.io.IOException;
+
+
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println();
-        System.out.println("Hello World ! This is tp 2 Maven.");
+        String asciiArt1 = "Hello World !";
+
+        try {
+            asciiArt1 = FigletFont.convertOneLine(asciiArt1);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(asciiArt1);
     }
 }
